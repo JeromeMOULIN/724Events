@@ -17,6 +17,9 @@
     &--display {
       animation: slide 1s forwards;
     }
+    img{
+      width: 100%;
+    }
     &__descriptionContainer {
       position: absolute;
       left: 0;

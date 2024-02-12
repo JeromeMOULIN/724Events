@@ -33,6 +33,7 @@ export const DataProvider = ({ children }) => {
     getData();
   }, []);
 
+  // Search last project 
     let id;
     let latestDate = data?.events[0].date 
   data?.events.forEach((element) => {
