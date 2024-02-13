@@ -42,6 +42,13 @@
       display: flex;
       justify-content: center;
       width: 100%;
+
+      &--hidden{
+        visibility: hidden;
+      }
+      &--show{
+        visibility: visible;
+      }
       
 
       input {

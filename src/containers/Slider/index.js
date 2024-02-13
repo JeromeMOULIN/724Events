@@ -15,6 +15,7 @@ const Slider = () => {
       () => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
       5000
     );
+
   };
   useEffect(() => {
     nextCard();
@@ -35,14 +36,17 @@ const Slider = () => {
               </div>
             </div>
           </div>
-          <div className="SlideCard__paginationContainer">
+          <div className={`SlideCard__paginationContainer SlideCard__paginationContainer--${index === idx ? "show" : "hidden"}`}>
             <div className="SlideCard__pagination">
+              
               {byDateDesc.map((_ ,radioIdx) => (
                 <input
-                  key={event.id}
+                  key={event.focus?.id}
+                  id={event.id}
                   type="radio"
                   name="radio-button"
                   checked={idx === radioIdx}
+                  readOnly
                 />
               ))}
             </div>
