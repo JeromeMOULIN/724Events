@@ -2,7 +2,9 @@
 
 header {
   height: 112px;
+  width: 100%;
 }
+
 nav {
   font-family: "Manrope", sans-serif;
   font-weight: 500;
@@ -11,21 +13,35 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+
   ul {
     list-style: none;
     display: flex;
     width: 80%;
     justify-content: flex-end;
     margin: 0;
+
     li {
       list-style: none;
-      margin: 40px;
+      margin: 2em;
       padding: 0;
+
       a {
         text-decoration: none;
         color: $black;
       }
     }
-    padding-right: 50px;
   }
+}
+@media (max-width :1012px) {
+  nav ul{
+    padding: 0;
+  }
+}
+@media (max-width :955px) {
+  nav ul{
+    font-size: 0.8em;
+    text-align: center;
+  }
+  
 }

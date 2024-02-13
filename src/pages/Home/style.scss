@@ -1,5 +1,6 @@
 @import "src/colors.scss";
-*{
+
+* {
   box-shadow: 0 0 0 3px red inset
 }
 
@@ -16,12 +17,15 @@ main {
   align-items: center;
   position: relative;
   width: 100%;
-  > * {
+
+  >* {
     z-index: 1;
   }
+
   .ListContainer {
     width: 100%;
   }
+
   &::after {
     background-color: white;
     position: absolute;
@@ -41,6 +45,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
+
   .Title {
     color: white;
   }
@@ -53,10 +58,13 @@ main {
   flex-wrap: wrap;
   width: 100%;
   position: relative;
-  > * {
+
+  >* {
     z-index: 1;
   }
+
   padding-bottom: 120px;
+
   &::after {
     background-color: white;
     position: absolute;
@@ -69,23 +77,28 @@ main {
     clip-path: ellipse(171% 100% at 58.47% 0%);
   }
 }
+
 .FormContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 32px;
+
   .Title {
     color: white;
     margin-bottom: 64px;
   }
+
   span {
     color: white;
   }
+
   .Button {
     width: 207px;
     margin-top: 32px;
   }
 }
+
 .ListContainer {
   width: 90%;
   max-width: 1200px;
@@ -95,6 +108,7 @@ main {
   margin-top: 64px;
   margin-bottom: 64px;
 }
+
 .Title {
   font-size: 50px;
   font-family: "Space Grotesk", sans-serif;
@@ -102,6 +116,7 @@ main {
   margin: 0;
   margin-top: 64px;
 }
+
 p {
   margin: 0;
 }
@@ -110,6 +125,7 @@ p {
   display: flex;
   justify-content: space-around;
 }
+
 .col {
   display: flex;
   flex-direction: column;
@@ -123,6 +139,7 @@ p {
     display: inline;
     margin: 2px;
   }
+
   margin-bottom: 50px;
 }
 
@@ -137,15 +154,18 @@ p {
 
 footer {
   padding: 0;
+
   .col {
     margin: 0;
     padding: 32px;
 
     &.contact {
       padding-left: 64px;
+
       div {
         padding-top: 16px;
       }
+
       address {
         padding-top: 8px;
       }
@@ -182,14 +202,43 @@ footer {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
   div {
     text-align: center;
     margin-bottom: 16px;
     font-weight: 600;
     color: $primary;
   }
+
   p {
     max-width: 360px;
   }
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width :1012px) {
+  form .row {
+    flex-direction: column;
+  }
+
+  footer {
+    width: 100%;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    .description,
+    .contact,
+    .presta {
+      margin: 0;
+      padding: 0!important;
+      width: 100%;
+      align-items: center;
+      border-left: none;
+      border-right: none;
+      padding-bottom: 2em;
+      border-bottom: 1px solid rgba(91, 50, 255, 0.2);
+    }
+
+  }
 }
