@@ -15,7 +15,6 @@ const Slider = () => {
       () => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
       5000
     );
-
   };
   useEffect(() => {
     nextCard();
@@ -26,7 +25,10 @@ const Slider = () => {
         <>
           <div
             key={event.id}
-            className={`SlideCard SlideCard--${index === idx ? "display" : "hide"}`}>
+            className={`SlideCard SlideCard--${
+              index === idx ? "display" : "hide"
+            }`}
+          >
             <img src={event.cover} alt="forum" />
             <div className="SlideCard__descriptionContainer">
               <div className="SlideCard__description">
@@ -36,10 +38,13 @@ const Slider = () => {
               </div>
             </div>
           </div>
-          <div className={`SlideCard__paginationContainer SlideCard__paginationContainer--${index === idx ? "show" : "hidden"}`}>
+          <div
+            className={`SlideCard__paginationContainer SlideCard__paginationContainer--${
+              index === idx ? "show" : "hidden"
+            }`}
+          >
             <div className="SlideCard__pagination">
-              
-              {byDateDesc.map((_ ,radioIdx) => (
+              {byDateDesc.map((_, radioIdx) => (
                 <input
                   key={event.focus?.id}
                   id={event.id}

@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   max-width: 1440px;
-  height: 586px; //586px before correction
+  height: 586px;
   overflow: hidden;
 
   .SlideCard {
@@ -34,7 +34,6 @@
       width: 100%;
     }
 
-
     &__paginationContainer {
       position: absolute;
       left: 0;
@@ -43,13 +42,12 @@
       justify-content: center;
       width: 100%;
 
-      &--hidden{
+      &--hidden {
         visibility: hidden;
       }
-      &--show{
+      &--show {
         visibility: visible;
       }
-      
 
       input {
         width: 16px;
