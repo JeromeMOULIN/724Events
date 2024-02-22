@@ -42,13 +42,6 @@
       justify-content: center;
       width: 100%;
 
-      &--hidden {
-        visibility: hidden;
-      }
-      &--show {
-        visibility: visible;
-      }
-
       input {
         width: 16px;
         height: 16px;
@@ -56,7 +49,7 @@
         color: $primary;
       }
     }
-
+    
     &__description {
       left: 0;
       bottom: 50px;

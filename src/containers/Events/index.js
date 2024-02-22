@@ -18,12 +18,15 @@ const EventList = () => {
       ? data?.events
       : data?.events.filter((event) => event.type === type)) || []
   ).filter((event, index) => {
-    if ((currentPage - 1 ) * PER_PAGE <= index && currentPage * PER_PAGE > index) {
+    if (
+      (currentPage - 1) * PER_PAGE <= index &&
+      currentPage * PER_PAGE > index
+    ) {
       return true;
     }
     return false;
   });
-  
+
   const changeType = (evtType) => {
     setCurrentPage(1);
     setType(evtType);

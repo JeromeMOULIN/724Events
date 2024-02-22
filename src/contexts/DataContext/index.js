@@ -33,19 +33,16 @@ export const DataProvider = ({ children }) => {
     getData();
   }, []);
 
-  // Search last project 
-    let id;
-    let latestDate = data?.events[0].date 
+  // Search last project
+  let id;
+  let latestDate = data?.events[0].date;
   data?.events.forEach((element) => {
-    if (element.date > latestDate){
-      latestDate = element.date
-      id = element.id
+    if (element.date > latestDate) {
+      latestDate = element.date;
+      id = element.id;
     }
-
-
-  })
-  const last = data?.events[id-1]
-
+  });
+  const last = data?.events[id - 1];
 
   return (
     <DataContext.Provider
@@ -63,7 +60,7 @@ export const DataProvider = ({ children }) => {
 
 DataProvider.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
 export const useData = () => useContext(DataContext);
 
