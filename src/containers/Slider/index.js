@@ -15,7 +15,7 @@ const Slider = () => {
     setMytimeout(
       setTimeout(
         () => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
-        2000
+        5000
       )
     );
   };
