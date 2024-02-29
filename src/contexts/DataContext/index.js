@@ -14,7 +14,7 @@ export const DataProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [last, setLast] = useState(null);
   const [data, setData] = useState(null);
-  const [load, setLoad] = useState(false);
+  const [load, setLoad] = useState(true);
 
   const getData = async () => {
     try {
@@ -32,9 +32,11 @@ export const DataProvider = ({ children }) => {
 
   useEffect(() => {
     setLoad(true);
-    if (load) return;
-    getData();
-  }, []);
+    if (load) {
+      getData();
+    }
+    return setLoad(false);
+  }, [data]);
 
   return data ? (
     <DataContext.Provider
